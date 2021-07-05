@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
 
-function App() {
+import WhosThatPokemon from "./components/WhosThatPokemon";
+import caterpiesil from "./img/caterpiesil.png";
+import koffingsil from "./img/koffingsil.png";
+import pikachusil from "./img/pikachusil.png";
+const App = () => {
+  const [imgSrc, setImgSrc] = useState("");
+
+  const silhouettes = [caterpiesil, koffingsil, pikachusil];
+
+  const randPokemon = silhouettes[Math.floor(Math.random() * 3)];
+
+  useEffect(() => {
+    if (randPokemon) {
+      setImgSrc(randPokemon);
+    }
+  }, [randPokemon]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <WhosThatPokemon randImg={imgSrc} />
     </div>
   );
-}
+};
 
 export default App;

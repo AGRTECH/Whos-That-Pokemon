@@ -1,0 +1,53 @@
+.template {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.sil {
+  margin-left: 300px;
+  margin-top: 150px;
+  width: 400px;
+  height: 400px;
+  z-index: 10;
+  position: relative;
+}
+
+.filled {
+  margin-top: -550px;
+  margin-left: -400px;
+  width: 400px;
+  height: 400px;
+  z-index: 100;
+  position: relative;
+}
+
+.input {
+  z-index: 15;
+  box-shadow: 2px 2px 5px 1px black;
+  margin-bottom: 5px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0 0 980px;
+  position: relative;
+  width: 200px;
+  align-items: center;
+}
+
+.label {
+  z-index: 15;
+  margin-bottom: 2px;
+  font-weight: bold;
+  font-size: 20px;
+  color: yellow;
+  -webkit-text-stroke: 0.5px blue;
+}
+
+.button {
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px 1px black;
+  font-weight: bold;
+}
